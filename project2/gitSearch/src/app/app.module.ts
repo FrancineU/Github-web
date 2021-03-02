@@ -8,6 +8,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { User } from './user.info/user.info.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HighlightDirective } from './highlight.directive';
+import { UppercasePipe } from './uppercase.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HighlightDirective } from './highlight.directive';
     RepositoriesComponent,
     User.InfoComponent,
     NavbarComponent,
-    HighlightDirective
+    HighlightDirective,
+    UppercasePipe
   ],
   imports: [
     BrowserModule,
