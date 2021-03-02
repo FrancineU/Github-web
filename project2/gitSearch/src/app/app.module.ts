@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { User } from './user.info/user.info.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     RepositoriesComponent,
-    User.InfoComponent
+    User.InfoComponent,
+    NavbarComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
