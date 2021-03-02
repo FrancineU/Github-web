@@ -1,30 +1,45 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ServiceService} from './services/service.service';
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
-import { RepositoriesComponent } from './repositories/repositories.component';
-import { User } from './user.info/user.info.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
+import { FormComponent } from './form/form.component';
+import { UserInfoComponent } from './user.info/user.info.component';
+import { RouterModule } from '@angular/router';
+import { RoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { UpperCasePipe } from './uppercase.pipe';
 import { HighlightDirective } from './highlight.directive';
-import { UppercasePipe } from './uppercase.pipe';
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent,
-    RepositoriesComponent,
-    User.InfoComponent,
     NavbarComponent,
+    RepositoriesComponent,
+    FormComponent,
+    UserInfoComponent,
+    UpperCasePipe,
     HighlightDirective,
-    UppercasePipe
+ 
+  
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RoutingModule,
+    RouterModule,
+    FormsModule,
+    HttpClientModule,
+  
+
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
